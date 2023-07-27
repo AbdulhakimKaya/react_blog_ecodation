@@ -1,8 +1,18 @@
 import React, {Component} from 'react';
 import {withTranslation} from "react-i18next";
+
+// Header, Footer
 import Header from "./components/Header";
-import Main from "./components/Main";
 import Footer from "./components/Footer";
+
+// Router
+import {Route, Routes} from "react-router-dom";
+
+// CRUD Components
+import BlogList from "./components/blog/BlogList";
+import BlogCreate from "./components/blog/BlogCreate";
+import BlogUpdate from "./components/blog/BlogUpdate";
+import BlogView from "./components/blog/BlogView";
 
 class RouterBlog extends Component {
     // display name
@@ -16,9 +26,19 @@ class RouterBlog extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header/>
-                <Main/>
-                <Footer/>
+                <Header logo={"fa-solid fa-blog"}/>
+
+                <div className="container">
+                    <Routes>
+                        <Route path={"/"} element={<BlogList/>}/>
+                        <Route path={"/blog/list"} element={<BlogList/>}/>
+                        <Route path={"/blog/create"} element={<BlogCreate/>}/>
+                        <Route path={"/blog/view/:id"} element={<BlogView/>}/>
+                        <Route path={"/blog/update/:id"} element={<BlogUpdate/>}/>
+                    </Routes>
+                </div>
+
+                <Footer copy={"© 2021 Copyright: "}/>
             </React.Fragment>
         );
     }

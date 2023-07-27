@@ -138,7 +138,7 @@ class Footer extends Component {
                             className="text-center p-4"
                             style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
                         >
-                            © 2021 Copyright:
+                            {this.props.copy}
                             <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
                                 React Blog
                             </a>

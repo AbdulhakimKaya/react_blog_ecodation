@@ -16,7 +16,7 @@ class Header extends Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#">
-                            Navbar
+                            <i className={this.props.logo}></i>
                         </a>
                         <button
                             className="navbar-toggler"
