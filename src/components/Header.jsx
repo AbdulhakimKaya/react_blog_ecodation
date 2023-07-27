@@ -4,12 +4,14 @@ import {withTranslation} from "react-i18next";
 class Header extends Component {
     // display name
     static displayName = "Header"
+
     constructor(props) {
         super(props);
 
         // State
         this.state = {}
     }
+
     render() {
         return (
             <React.Fragment>
@@ -27,7 +29,7 @@ class Header extends Component {
                             aria-expanded="false"
                             aria-label="Toggle navigation"
                         >
-                            <span className="navbar-toggler-icon" />
+                            <span className="navbar-toggler-icon"/>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -63,7 +65,7 @@ class Header extends Component {
                                             </a>
                                         </li>
                                         <li>
-                                            <hr className="dropdown-divider" />
+                                            <hr className="dropdown-divider"/>
                                         </li>
                                         <li>
                                             <a className="dropdown-item" href="#">

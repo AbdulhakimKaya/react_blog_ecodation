@@ -13,16 +13,19 @@ import BlogList from "./components/blog/BlogList";
 import BlogCreate from "./components/blog/BlogCreate";
 import BlogUpdate from "./components/blog/BlogUpdate";
 import BlogView from "./components/blog/BlogView";
+import Main from "./components/Main";
 
 class RouterBlog extends Component {
     // display name
     static displayName = "Router_Blog"
+
     constructor(props) {
         super(props);
 
         // State
         this.state = {}
     }
+
     render() {
         return (
             <React.Fragment>
@@ -30,7 +33,7 @@ class RouterBlog extends Component {
 
                 <div className="container">
                     <Routes>
-                        <Route path={"/"} element={<BlogList/>}/>
+                        <Route path={"/"} element={<Main/>}/>
                         <Route path={"/blog/list"} element={<BlogList/>}/>
                         <Route path={"/blog/create"} element={<BlogCreate/>}/>
                         <Route path={"/blog/view/:id"} element={<BlogView/>}/>

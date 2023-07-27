@@ -18,22 +18,22 @@ class Footer extends Component {
                             {/* Right */}
                             <div>
                                 <a href="" className="me-4 text-reset">
-                                    <i className="fab fa-facebook-f" />
+                                    <i className="fab fa-facebook-f"/>
                                 </a>
                                 <a href="" className="me-4 text-reset">
-                                    <i className="fab fa-twitter" />
+                                    <i className="fab fa-twitter"/>
                                 </a>
                                 <a href="" className="me-4 text-reset">
-                                    <i className="fab fa-google" />
+                                    <i className="fab fa-google"/>
                                 </a>
                                 <a href="" className="me-4 text-reset">
-                                    <i className="fab fa-instagram" />
+                                    <i className="fab fa-instagram"/>
                                 </a>
                                 <a href="" className="me-4 text-reset">
-                                    <i className="fab fa-linkedin" />
+                                    <i className="fab fa-linkedin"/>
                                 </a>
                                 <a href="" className="me-4 text-reset">
-                                    <i className="fab fa-github" />
+                                    <i className="fab fa-github"/>
                                 </a>
                             </div>
                             {/* Right */}
@@ -48,7 +48,7 @@ class Footer extends Component {
                                     <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                                         {/* Content */}
                                         <h6 className="text-uppercase fw-bold mb-4">
-                                            <i className="fas fa-gem me-3" />
+                                            <i className="fas fa-gem me-3"/>
                                             Company name
                                         </h6>
                                         <p>
@@ -114,17 +114,17 @@ class Footer extends Component {
                                         {/* Links */}
                                         <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                                         <p>
-                                            <i className="fas fa-home me-3" /> New York, NY 10012, US
+                                            <i className="fas fa-home me-3"/> New York, NY 10012, US
                                         </p>
                                         <p>
-                                            <i className="fas fa-envelope me-3" />
+                                            <i className="fas fa-envelope me-3"/>
                                             info@example.com
                                         </p>
                                         <p>
-                                            <i className="fas fa-phone me-3" /> + 01 234 567 88
+                                            <i className="fas fa-phone me-3"/> + 01 234 567 88
                                         </p>
                                         <p>
-                                            <i className="fas fa-print me-3" /> + 01 234 567 89
+                                            <i className="fas fa-print me-3"/> + 01 234 567 89
                                         </p>
                                     </div>
                                     {/* Grid column */}
@@ -136,7 +136,7 @@ class Footer extends Component {
                         {/* Copyright */}
                         <div
                             className="text-center p-4"
-                            style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
+                            style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}
                         >
                             {this.props.copy}
                             <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
