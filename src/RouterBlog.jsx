@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 // Router
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 // CRUD Components
 import BlogList from "./components/blog/BlogList";
@@ -38,6 +38,7 @@ class RouterBlog extends Component {
                         <Route path={"/blog/create"} element={<BlogCreate/>}/>
                         <Route path={"/blog/view/:id"} element={<BlogView/>}/>
                         <Route path={"/blog/update/:id"} element={<BlogUpdate/>}/>
+                        <Route path={"*"} element={<Navigate to={"/"}/>}/>
                     </Routes>
                 </div>
 
