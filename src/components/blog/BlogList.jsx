@@ -58,9 +58,9 @@ class BlogList extends Component {
                                 <td>{temp.header}</td>
                                 <td>{temp.content}</td>
                                 <td>{temp.systemDate}</td>
-                                <td><i className="fa-solid fa-pen-nib text-primary"></i></td>
-                                <td><i className="fa-solid fa-binoculars text-warning"></i></td>
-                                <td><i className={"fa-solid fa-trash text-danger"}></i></td>
+                                <td className={"text-center"}><i className="fa-solid fa-pen-nib text-primary"></i></td>
+                                <td className={"text-center"}><i className="fa-solid fa-binoculars text-warning"></i></td>
+                                <td className={"text-center"}><i className={"fa-solid fa-trash text-danger"}></i></td>
                             </tr>
                         ))
                     }

@@ -17,7 +17,7 @@ class Header extends Component {
         const {logo, t} = this.props
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#">
                             <i className={logo}></i>
