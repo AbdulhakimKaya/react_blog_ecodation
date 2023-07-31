@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {withTranslation} from "react-i18next";
+import OtherLanguageReusability from "../internationalization/OtherLanguageReusability";
 
 class Header extends Component {
     // display name
@@ -13,12 +14,13 @@ class Header extends Component {
     }
 
     render() {
+        const {logo, t} = this.props
         return (
             <React.Fragment>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="#">
-                            <i className={this.props.logo}></i>
+                            <i className={logo}></i>
                         </a>
                         <button
                             className="navbar-toggler"
@@ -35,49 +37,52 @@ class Header extends Component {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" href="#">
-                                        Home
+                                        {t('homepage')}
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                        Link
+                                        {t('about')}
                                     </a>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        Dropdown
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Another action
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <hr className="dropdown-divider"/>
-                                        </li>
-                                        <li>
-                                            <a className="dropdown-item" href="#">
-                                                Something else here
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link disabled">Disabled</a>
+                                    <a className="nav-link" href="#">
+                                        {t('blog')}
+                                    </a>
                                 </li>
+                                {/*<li className="nav-item dropdown">*/}
+                                {/*    <a*/}
+                                {/*        className="nav-link dropdown-toggle"*/}
+                                {/*        href="#"*/}
+                                {/*        role="button"*/}
+                                {/*        data-bs-toggle="dropdown"*/}
+                                {/*        aria-expanded="false"*/}
+                                {/*    >*/}
+                                {/*        Dropdown*/}
+                                {/*    </a>*/}
+                                {/*    <ul className="dropdown-menu">*/}
+                                {/*        <li>*/}
+                                {/*            <a className="dropdown-item" href="#">*/}
+                                {/*                Action*/}
+                                {/*            </a>*/}
+                                {/*        </li>*/}
+                                {/*        <li>*/}
+                                {/*            <a className="dropdown-item" href="#">*/}
+                                {/*                Another action*/}
+                                {/*            </a>*/}
+                                {/*        </li>*/}
+                                {/*        <li>*/}
+                                {/*            <hr className="dropdown-divider"/>*/}
+                                {/*        </li>*/}
+                                {/*        <li>*/}
+                                {/*            <a className="dropdown-item" href="#">*/}
+                                {/*                Something else here*/}
+                                {/*            </a>*/}
+                                {/*        </li>*/}
+                                {/*    </ul>*/}
+                                {/*</li>*/}
                             </ul>
+                            <OtherLanguageReusability/>
                             <form className="d-flex" role="search">
                                 <input
                                     className="form-control me-2"
