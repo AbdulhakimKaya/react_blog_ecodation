@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 import './main.css'
 
-import cardPicture from '../assets/cat.jpg'
+import cardPicture from '../assets/image/cat.jpg'
 
 class Main extends Component {
     render() {

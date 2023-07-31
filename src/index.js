@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import RouterBlog from "./RouterBlog";
 import {BrowserRouter} from "react-router-dom";
 
+import './internationalization/i18nLanguage'
+
 // Root
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
