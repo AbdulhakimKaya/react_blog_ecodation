@@ -10,6 +10,10 @@ class BlogCreate extends Component {
 
         // State
         this.state = {
+            header: null,
+            content: null,
+            blogDto: {}, //object
+            isRead: false, // sözleşme kuralları
         }
 
         // Bind
@@ -18,9 +22,23 @@ class BlogCreate extends Component {
     // CDM
 
     // Functions
+    onChangeIsRead = (event) => {
+        this.setState({
+            isRead: event.target.checked
+        })
+    }
+
+    onChangeReset = (event) => {
+        this.setState({
+            header: '',
+            content: '',
+        })
+    }
+
     render() {
         // object destructing
         const {t} = this.props
+        const {isRead} = this.state
         return (
             <React.Fragment>
                 <h1 className={"text-center display-5 text-uppercase mt-5 pt-5"}>{t('blog_create')}</h1>
@@ -32,8 +50,8 @@ class BlogCreate extends Component {
                         <input
                             type="text"
                             className={"form-control"}
-                            id={""}
-                            name={""}
+                            id={"header"}
+                            name={"header"}
                             placeholder={t('blog_header')}
                             required={true}
                             autoFocus={true}
@@ -46,16 +64,42 @@ class BlogCreate extends Component {
                         <textarea
                             type="text"
                             className={"form-control"}
-                            id={""}
-                            name={""}
+                            id={"content"}
+                            name={"content"}
                             placeholder={t('blog_content')}
                             required={true}
                             autoFocus={false}
                         />
                     </div>
 
-                    {/* Submit */}
-                    <button className={"btn btn-primary mb-5"}>{t('submit')}</button>
+                    <div className={"form-check mb-4"}>
+                        <input
+                            type="checkbox"
+                            className={"form-check-input"}
+                            id={"isReadId"}
+                            name={"isReadId"}
+                            onChange={this.onChangeIsRead}
+                        />
+                        <label htmlFor={"isReadId"} className={"form-check-label"}>Anlaşmayı okudunuz mu?</label>
+                    </div>
+
+                    <div className={"d-flex gap-2 mb-5"}>
+                        {/* Submit */}
+                        <button
+                            className={"btn btn-primary"}
+                            disabled={!isRead}
+                        >
+                            {t('submit')}
+                        </button>
+
+                        {/* Reset */}
+                        <button
+                            className={"btn btn-danger"}
+                            onChange={this.onChangeReset}
+                        >
+                            {t('reset')}
+                        </button>
+                    </div>
                 </form>
             </React.Fragment>
         );
