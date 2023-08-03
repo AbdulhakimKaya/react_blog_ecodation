@@ -69,7 +69,7 @@ class BlogList extends Component {
         const {blogList} = this.state
         return (
             <React.Fragment>
-                <h1 className={"text-center display-4 text-uppercase"}>Blog List</h1>
+                <h1 className={"text-center display-5 text-uppercase mt-5 pt-5"}>{t('blog_list')}</h1>
                 <div className={"d-flex gap-2 my-4"}>
                     <Link
                         to={'/blog/create'}
