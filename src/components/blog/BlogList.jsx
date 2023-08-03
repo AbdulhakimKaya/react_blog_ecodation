@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withTranslation} from "react-i18next";
 import BlogApi from "../../services/BlogApi";
+import {Link} from "react-router-dom";
 
 
 class BlogList extends Component {
@@ -18,7 +19,6 @@ class BlogList extends Component {
         }
 
         // Bind
-        this.create = this.create.bind(this)
         this.update = this.update.bind(this)
         this.view = this.view.bind(this)
         this.delete = this.delete.bind(this)
@@ -40,11 +40,6 @@ class BlogList extends Component {
 
     // Functions
 
-    // Create
-    create() {
-        alert("create success")
-    }
-
     // Update
     update(id) {
         alert(id)
@@ -57,7 +52,15 @@ class BlogList extends Component {
 
     // Delete
     delete(id) {
-        alert(id)
+        BlogApi.blogServiceDeleteId(id)
+            .then((response) => {
+                this.setState({
+                    blogList: this.state.blogList.filter(blogList => blogList.id !== id)
+                })
+            })
+            .catch((err) => {
+                alert("Veri silme işlemi başarısız!")
+            })
     }
 
     render() {
@@ -68,19 +71,19 @@ class BlogList extends Component {
             <React.Fragment>
                 <h1 className={"text-center display-4 text-uppercase"}>Blog List</h1>
                 <div className={"d-flex gap-2 my-4"}>
-                    <button
+                    <Link
+                        to={'/blog/create'}
                         className={"btn btn-primary d-flex justify-content-center align-items-center gap-2"}
-                        onClick={this.create}
                     >
                         <i className="fa-solid fa-plus"></i>
-                        Blog Create
-                    </button>
+                        {t('blog_create')}
+                    </Link>
 
                     <button
                         className={"btn btn-danger d-flex justify-content-center align-items-center gap-2"}
                     >
                         <i className={"fa-solid fa-trash"}></i>
-                        Blog All Delete
+                        {t('blog_all_delete')}
                     </button>
                 </div>
                 <table className="table table-hover table-striped">
